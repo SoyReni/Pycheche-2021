@@ -1,0 +1,109 @@
+.achicar{
+    width: 920px;
+}
+
+Button{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.categoria{
+    box-shadow:  5px 5px 5px lightgray;
+    border-radius: 10px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 5%;
+    padding: 1%;
+}
+
+.margin-0{
+    margin: 0; 
+}
+
+.padding-0{
+    padding: 0;
+}
+
+Button{
+    padding: 0;
+}
+
+.row, .container{
+    width: 100%;
+    height: 100%;
+}
+.titulo-categoria{
+    padding: 5%;
+    background-color: #FFB287;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-size: 1,2em;
+}
+
+.titulo-clase{
+    padding: 5%;
+    background-color: #FFB287;
+    border-radius: 10px 0 0 0;
+    color: white;
+    font-size: 1,2em;
+}
+
+.logo-texto{
+    font-family: "Baloo 2";
+    font-weight: 700;
+}
+
+.datos-clase{
+    background-color: #FFE4D4;
+    border-radius: 0 10px 0 0;
+    font-size: xx-small;
+    padding: 0;
+}
+
+.descripcion-clase{
+    background-color: #F3F3F3;
+    border-radius: 0 0 10px 10px;
+    font-size: medium;
+    text-transform: none;
+    max-height: 115px;
+    overflow: hidden;
+}
+
+.datos-clase p{
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    padding-top: 5%;
+    text-overflow: ellipsis;
+    text-justify: auto;
+}
+
+.fav{
+    border-radius: 100%;
+    background-color: #FFB287;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    margin-left: 50px;
+    margin-top: -100px;
+}
+
+.clases-container{
+    position: relative;
+}
+
+.clases-card{
+    
+    top: 0; 
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.titulo-clases{
+    font-family: "Baloo 2";
+    font-weight: 700;
+    font-size: medium;
+}
