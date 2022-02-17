@@ -33,7 +33,12 @@
     "/editorDePasos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/editorDePasos.js"
+      "static/chunks/pages/editorDePasos.js"],
+    
+    "/clases": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/clases.js"
     ]
   },
   "ampFirstPages": []
