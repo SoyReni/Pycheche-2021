@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: theme.palette.button.main,
     },
+    boxSizing: "border-box",
+    width: "100%",
+    height: "100%",
   },
   img: {
     width: "100%",
@@ -32,12 +35,13 @@ const About = () => {
           variant="h1"
           align="center"
           gutterBottom
+          className="logo-texto"
           style={{ marginBottom: "1em" }}
         >
-          Pycheche
+          <p className="logo-texto">Pycheche</p>
         </Typography>
         <Grid container direction="column" alignItems="center" spacing={4}>
-          <Grid item>
+          <Grid item md={8} xs={12}>
             <Button
               component={"a"}
               rel="noreferrer noopener"
@@ -47,7 +51,7 @@ const About = () => {
               Explorar
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item md={8}>
             <Button
               component={"a"}
               rel="noreferrer noopener"
@@ -57,7 +61,7 @@ const About = () => {
               Crear Clase
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item md={8}>
             <Button
               component={"a"}
               rel="noreferrer noopener"

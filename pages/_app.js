@@ -4,7 +4,8 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "theme";
-
+import '../css/style.css'
+import 'bootstrap/dist/css/bootstrap.css'
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
@@ -17,12 +18,16 @@ export default function MyApp(props) {
   }, []);
 
   return (
-    <React.Fragment>
+    <React.Fragment classname="achicar">
       <Head>
         <title>Pycheche 2022</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
         />
       </Head>
       <ThemeProvider theme={theme}>
