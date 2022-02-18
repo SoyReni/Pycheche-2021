@@ -1,0 +1,86 @@
+
+
+.cabecera{
+	border: 2px  solid  rgba(0, 0, 0, 0.16);
+	border-radius: 20px;
+	padding: 9px;
+	Font-size: 20px;
+	margin-bottom: 5px;
+	text-align: center;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.cuadro{
+    display: block;
+}
+
+.input_text{
+	border-top: 2px;
+	border-left: 2px;
+	border-right: 2px;
+	margin-left:  10px;
+}
+
+.subtitulo{
+	text-align: left;
+	Font-size: 18px;
+	color: gray;
+}
+
+.observacion, .btn_pasos, .btn_guardar{		
+	text-align: center;
+	width: 100%;
+	font-size: 16px;
+	padding: 5px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+.observacion{
+	border: 2px  solid  rgba(0, 0, 0, 0.16);	
+}
+.btn_pasos, .btn_mas{
+	border: 0px;
+	border-radius: 20px;
+	background-color: #FCE18B;
+	color: rgb(155, 146, 146);
+}
+.btn_mas, .btn_guardar,.btn_pasos {
+	cursor: pointer;
+}
+
+.btn_guardar{
+	margin-top: 15px ;
+	margin-left: 25%;
+	margin-bottom: 0px;
+	width: 50%;
+	border: 0px;
+	border-radius: 20px;
+	background-color: #FF7893;
+	color: white;
+}
+.btn_mas{
+	padding: 2px 10px 2px 10px;
+	border-radius: 0%;
+	font-size: 20px;
+}
+
+.btn_guardar:hover {
+	color: rgba(255, 255, 255, 1) !important;
+	box-shadow: 0 4px 16px #FF7893;
+	transition: all 0.2s ease;
+  }
+
+  .btn_pasos:hover {
+	color: rgba(255, 255, 255, 1) !important;
+	box-shadow: 0 4px 16px #FCE18B;
+	transition: all 0.2s ease;
+  }
+
+  .btn_mas:hover {
+	color: rgba(255, 255, 255, 1) !important;
+	box-shadow: 0 4px 16px #FCE18B;
+	transition: all 0.2s ease;
+  }.formulario{
+	  width: 30%;
+  }
