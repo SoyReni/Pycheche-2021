@@ -1,3 +1,4 @@
+
 # Created by https://www.toptal.com/developers/gitignore/api/nextjs,react,node,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,react,node,visualstudiocode
 
@@ -180,4 +181,3 @@ sketch
 # Support for Project snippet scope
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs,react,node,visualstudiocode
-node_modules
