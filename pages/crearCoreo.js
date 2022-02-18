@@ -156,7 +156,7 @@ const CrearCoreo = () => {
                     
           
                 <button type="submit" className={estilos.btn_guardar}>Guardar Coreo</button>
-                {formularioEnviado && <p className="exito">Clase creada con exito!</p>}
+                {formularioEnviado && <p className="exito">Coreo creada con exito!</p>}
               </Form>
             )}
 

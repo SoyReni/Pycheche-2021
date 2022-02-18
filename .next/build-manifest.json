@@ -11,18 +11,25 @@
   ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js",
-    "static/development/_middlewareManifest.js"
+    "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/_app": [
-      "static/chunks/webpack.js",
+<<<<<<< Updated upstream
+=======
+    "/": [
       "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/index.js"
+    ],
+>>>>>>> Stashed changes
+    "/_app": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
       "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
       "static/chunks/main.js",
+<<<<<<< Updated upstream
       "static/chunks/pages/_error.js"
     ],
     "/crearClase": [
@@ -39,6 +46,10 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/misClases.js"
+=======
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_error.js"
+>>>>>>> Stashed changes
     ]
   },
   "ampFirstPages": []

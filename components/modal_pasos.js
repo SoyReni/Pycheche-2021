@@ -46,8 +46,8 @@ const ModalPasos = (props) => {
         </ModalBody>
 
         <ModalFooter>
-            <Button color= "primary" onClick={props.onAddModalChange}>Guardar</Button>
-            <Button color="secondary" onClick={props.onAddModalChange}>Cancelar</Button>
+            <Button color= "primary" onClick={props.onAddModalChange}>Guardar.</Button>
+            <Button color="secondary" onClick={props.onAddModalChange}>Cancelar.</Button>
         </ModalFooter>
       </Modal>
       </>
