@@ -1,45 +1,65 @@
 import Layout from "components/layout/Layout";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Swatch from "components/swatch";
+import rough from "roughjs/bundled/rough.esm";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Image from "components/image";
 
-const useStyles = makeStyles((theme) => ({
-  snsIcon: {
-    width: "30px",
-    height: "30px",
 
-    [theme.breakpoints.down("xs")]: {
-      width: "25px",
-      height: "25px",
-    },
-    "&:hover": {
-      color: theme.palette.info.main,
-    },
-  },
-  avator: {
-    width: "8em",
-    height: "8em",
-    boxShadow: "0px 0px 10px 1px #b2b2b28f",
-  },
-}));
+
+
+ 
 
 const EditorDePasos = () => {
-  const classes = useStyles();
+  
+
+  
   return (
     <Layout
       title="Crear Clase"
       description="Pagina para crear una clase nueva"
     >
-      <Container maxWidth="md">
+            <Container maxWidth="md">
         <Grid container direction="column" spacing={8}>
           <Grid item>
+
             
+            <div class= "DescripcionPaso">
+              <h3>Agregue una descripcion</h3>
+                 <div class="form-group purple-border">
+                    
+                    <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                    <Router>
+                      <li>
+                      <Link to="/image"> Ir a la pizzarra </Link> - <code>/components/image.js</code>
+                      </li>    
+                      <Switch>
+                      <Route path="/Image" component={Image} />
+                      </Switch>
+
+                     </Router>
+                    <capturar/>
+                    
+                   
+                  
+                  </div>
+            </div>
+
+
+
+
           </Grid>
           
         </Grid>
       </Container>
     </Layout>
   );
-};
+
+  
+  };
+
 
 export default EditorDePasos;
