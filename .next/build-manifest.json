@@ -15,11 +15,14 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
+<<<<<<< Updated upstream
     "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
+=======
+>>>>>>> Stashed changes
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -29,6 +32,7 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+<<<<<<< Updated upstream
     ],
     "/editorDePasos": [
       "static/chunks/webpack.js",
@@ -39,6 +43,8 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/clases.js"
+=======
+>>>>>>> Stashed changes
     ]
   },
   "ampFirstPages": []
