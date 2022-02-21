@@ -125,3 +125,23 @@
 	box-shadow: 0 4px 16px #FCE18B;
 	transition: all 0.2s ease;
   }
+
+  
+  .btn_ok{
+	cursor: pointer;
+	border: 0px;
+	border-radius: 20px;
+	background-color: #FF7893;
+	color: white;
+	padding: 2px 30px 2px 30px;
+}
+
+.header_Modal{
+	background-color: #FFB287;
+	color: white;
+}
+
+
+.btn_ok:hover{
+	background: #eb5674;;
+}

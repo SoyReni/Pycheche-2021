@@ -65,6 +65,37 @@
 	font-size: 20px;
 }
 
+
+
+  .formulario{
+	  width: 40%;
+  }
+
+  .btn_ok{
+	cursor: pointer;
+	border: 0px;
+	border-radius: 20px;
+	background-color: #FF7893;
+	color: white;
+	padding: 2px 30px 2px 30px;
+}
+
+.header_Modal{
+	background-color: #FFB287;
+	color: white;
+}
+
+.btn_guardarPaso{
+	cursor: pointer;
+	border: 0px;
+	border-radius: 5px;
+	background-color: #FF7893;
+	color: white;
+	padding: 9px 23px 9px 23px;
+	font-size: 15px;
+}
+
+  
 .btn_guardar:hover {
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FF7893;
@@ -81,6 +112,27 @@
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FCE18B;
 	transition: all 0.2s ease;
-  }.formulario{
-	  width: 30%;
-  }
+}
+
+.btn_guardarPaso:hover{
+	background: #eb5674;;
+}
+
+.btn_ok:hover{
+	background: #eb5674;;
+}
+
+.btn_subirArchivo{
+
+margin-top: 10px;
+border-radius: 5px;
+padding: 8px;
+border: 0px;
+background-color: #f5d878;
+color: rgb(0, 0, 0);
+}
+
+.btn_subirArchivo:hover{
+	background-color: #f5d15c;
+}
+	

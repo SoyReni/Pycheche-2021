@@ -1,9 +1,7 @@
 import Layout from "components/layout/Layout";
-
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import React, { useState, useEffect } from 'react';
-import { map } from 'lodash'
+
 const useStyles = makeStyles((theme) => ({
   snsIcon: {
     width: "30px",
@@ -25,22 +23,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MisClases = () => {
-  let list = [];
+  
   const classes = useStyles();
-
-  useEffect(() => {
-    let i = 0;
-    let divsito = document.getElementById("t")
-    for (let x = 1; x < localStorage.length; x++) {
-      list[i] = JSON.parse((localStorage.getItem(x)));
-      i++;
-
-    }
-
-    { map(list, comp => divsito.innerHTML = comp.title)}
-
-  }, " ");
-
 
   return (
     <Layout
@@ -50,7 +34,7 @@ const MisClases = () => {
       <Container maxWidth="md">
         <Grid container direction="column" spacing={8}>
           <Grid item>
-          <div id = "t"></div>
+          
           </Grid>
 
         </Grid>

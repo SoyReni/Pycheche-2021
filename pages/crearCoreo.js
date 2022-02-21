@@ -1,12 +1,11 @@
 import Layout from "components/layout/Layout";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import document from "next/document";
 import { Formik, Form, Field } from 'formik';
 import React, { useState } from 'react';
 import estilos from 'styles/Crear_coreo.module.css';
 import ModalPasos from "components/modal_pasos";
-import { ContactSupportOutlined } from "@material-ui/icons";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const useStyles = makeStyles((theme) => ({
   snsIcon: {
@@ -28,16 +27,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const modalStyles = {
+  position: "absolute",
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '88%'
+}
 
 
 const CrearCoreo = () => {
- 
-  const [addModal, setAddModal] = useState(false); 
-  const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
+
+  const [addModal, setAddModal] = useState(false);
   const [botonMusica, cambiarbotonMusica] = useState(false);
   const [botonVestuario, cambiarbotonVestuario] = useState(false);
   const [botonAccesorio, cambiarbotonAccesorio] = useState(false);
   const [botonElemento, cambiarbotonElemento] = useState(false);
+  const [abrirModal, setModal] = useState(false);  //modal para mostrar exito de coreo creada
   const classes = useStyles();
 
   return (
@@ -47,8 +53,8 @@ const CrearCoreo = () => {
     >
       <Container maxWidth="md">
         <Grid container direction="column" alignItems="center" spacing={4}>
-   
-     <ModalPasos isOpen={addModal}  onAddModalChange={handleAddModalChange}/>
+
+          <ModalPasos isOpen={addModal} onAddModalChange={handleAddModalChange} />
 
           <Formik
             initialValues={{
@@ -64,22 +70,20 @@ const CrearCoreo = () => {
               resetForm();
               console.log('Formulario enviado');
               const coreo = {
-              //  id : localStorage.length+1,
+                //  id : localStorage.length+1,
                 name: valores.nombre,
                 projection: valores.proyeccion,
                 musica: valores.input_musica,
                 vestuario: valores.input_vestuario,
                 accesorio: valores.input_accesorio
-            } 
+              }
 
-            /*Guardar clase localstore*/
-           // localStorage.setItem(clase.id, JSON.stringify(clase));
-           // console.log(localStorage.length);
-            /*imprimir*/
-            //for (let x = 1; x <= localStorage.length; x++)   console.log(localStorage.getItem(x));
+              /*Guardar clase localstore*/
+              // localStorage.setItem(clase.id, JSON.stringify(clase));
+              // console.log(localStorage.length);
+              /*imprimir*/
+              //for (let x = 1; x <= localStorage.length; x++)   console.log(localStorage.getItem(x));
               console.log(coreo);
-              cambiarFormularioEnviado(true);
-              setTimeout(() => cambiarFormularioEnviado(false), 5000);
             }}
           >
             {() => (
@@ -96,72 +100,85 @@ const CrearCoreo = () => {
 
                 <div className={estilos.cuadro}>
                   <label htmlFor="proyeccion" className={estilos.subtitulo}>Proyeccion</label>
-                  <Field name="proyeccion"  as= "select" className={estilos.select_proyeccion}>
-                     <option value= "Proyecccion1"> Proyecccion1</option>
-                     <option value= "Proyecccion2"> Proyecccion2</option>
-                     <option value= "Proyecccion3"> Proyecccion3</option>
+                  <Field name="proyeccion" as="select" className={estilos.select_proyeccion}>
+                    <option value="Proyecccion1"> Proyecccion1</option>
+                    <option value="Proyecccion2"> Proyecccion2</option>
+                    <option value="Proyecccion3"> Proyecccion3</option>
                   </Field>
                 </div>
 
                 <div className={estilos.cuadro}>
-                <label htmlFor="musica" className={estilos.subtitulo}>Musica</label>
-                <button type="button" className={estilos.btn_mas} onClick={precionarBotonMusica}>+</button>
+                  <label htmlFor="musica" className={estilos.subtitulo}>Musica</label>
+                  <button type="button" className={estilos.btn_mas} onClick={precionarBotonMusica}>+</button>
                   {botonMusica && <Field
                     type="text"
                     id="input_musica"
-                    name="input_musica"     
-                    placeholder="..."      
-                    className= {estilos.input_text}
+                    name="input_musica"
+                    placeholder="..."
+                    className={estilos.input_text}
                   />}
                 </div>
 
                 <div className={estilos.cuadro}>
-                <label htmlFor="vestuario" className={estilos.subtitulo}>Vestuario</label>
-                <button type="button" className={estilos.btn_mas} onClick={precionarBotonVestuario}>+</button>
+                  <label htmlFor="vestuario" className={estilos.subtitulo}>Vestuario</label>
+                  <button type="button" className={estilos.btn_mas} onClick={precionarBotonVestuario}>+</button>
                   {botonVestuario && <Field
                     type="text"
                     id="input_vestuario"
                     name="input_vestuario"
-                    placeholder="..."  
-                    className= {estilos.input_text}
+                    placeholder="..."
+                    className={estilos.input_text}
                   />}
                 </div>
 
                 <div className={estilos.cuadro}>
-                <label htmlFor="accesorios" className={estilos.subtitulo}>Accesorios</label>
-                <button type="button" className={estilos.btn_mas} onClick={precionarBotonAccesorio}>+</button>
+                  <label htmlFor="accesorios" className={estilos.subtitulo}>Accesorios</label>
+                  <button type="button" className={estilos.btn_mas} onClick={precionarBotonAccesorio}>+</button>
                   {botonAccesorio && <Field
                     type="text"
                     id="input_accesorio"
                     name="input_accesorio"
-                    placeholder="..."  
-                    className= {estilos.input_text}
+                    placeholder="..."
+                    className={estilos.input_text}
                   />}
                 </div>
 
                 <div className={estilos.cuadro}>
-                <label htmlFor="elemento" className={estilos.subtitulo}>Elemento</label>
-                <button type="button" className={estilos.btn_mas} onClick={precionarBotonElemento}>+</button>
+                  <label htmlFor="elemento" className={estilos.subtitulo}>Elemento</label>
+                  <button type="button" className={estilos.btn_mas} onClick={precionarBotonElemento}>+</button>
                   {botonElemento && <Field
                     type="text"
                     id="input_elemento"
                     name="input_elemento"
-                    placeholder="..."  
-                    className= {estilos.input_text}
+                    placeholder="..."
+                    className={estilos.input_text}
                   />}
                 </div>
 
-                    <a href="/editorDePasos" >  <input type="button" value="Crear Paso" className={estilos.btn_pasos}/></a>
-                    <button type="button" className={estilos.btn_pasos} onClick={handleAddModalChange}>Subir pasos</button>
-                    
-          
-                <button type="submit" className={estilos.btn_guardar}>Guardar Coreo</button>
-                {formularioEnviado && <p className="exito">Coreo creada con exito!</p>}
+                <a href="/editorDePasos" >  <input type="button" value="Crear Paso" className={estilos.btn_pasos} /></a>
+                <button type="button" className={estilos.btn_pasos} onClick={handleAddModalChange}>Subir pasos</button>
+
+
+                <button type="submit" className={estilos.btn_guardar} onClick={guardadoExitoso}>Guardar Coreo</button>
+
               </Form>
             )}
 
           </Formik>
 
+          <Modal isOpen={abrirModal} style={modalStyles} >
+            <ModalHeader className={estilos.header_Modal}>
+              PYCHECHE
+            </ModalHeader>
+            <ModalBody>
+              <div>
+                <h6>Coreo creada con exito!!!</h6>
+              </div>
+            </ModalBody>
+            <ModalFooter>
+              <a href="/misClases" >  <input type="button" value="OK!" className={estilos.btn_ok} /></a>
+            </ModalFooter>
+          </Modal>
 
         </Grid>
       </Container>
@@ -183,6 +200,10 @@ const CrearCoreo = () => {
   }
   function precionarBotonElemento() {
     cambiarbotonElemento(!botonElemento);
+  }
+
+  function guardadoExitoso() {
+    setModal(!abrirModal);
   }
 
 
