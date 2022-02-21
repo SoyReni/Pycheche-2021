@@ -62,6 +62,7 @@ const DrawingTool = () => {
     >
       Canvas
     </canvas>
+    
   );
 };
 export default DrawingTool;

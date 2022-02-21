@@ -6,7 +6,7 @@ export default function Swatch({ setToolType }) {
       <div className="row">
         <div className="col-md-12">
           <div>
-            <button
+          <button type="button" class="btn btn-primary"
               title="Pencil"
               onClick={() => {
                 setToolType("pencil");
@@ -14,14 +14,7 @@ export default function Swatch({ setToolType }) {
             >
               Pencil
             </button>
-            <button
-              title="Line"
-              onClick={() => {
-                setToolType("line");
-              }}
-            >
-              Line
-            </button>
+           
           </div>
         </div>
       </div>
