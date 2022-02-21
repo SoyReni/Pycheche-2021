@@ -25,20 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/crearClase": [
+    "/editorDePasos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/crearClase.js"
-    ],
-    "/crearCoreo": [
-      "static/chunks/webpack.js",
+      "static/chunks/pages/editorDePasos.js"],
+    
+    "/clases": [
       "static/chunks/main.js",
-      "static/chunks/pages/crearCoreo.js"
-    ],
-    "/misClases": [
       "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/misClases.js"
+      "static/chunks/pages/clases.js"
     ]
   },
   "ampFirstPages": []

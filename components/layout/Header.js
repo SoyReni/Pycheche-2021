@@ -37,18 +37,20 @@ function ElevationScroll(props) {
 const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: `5em`,
+    marginBottom: `1em`,
     [theme.breakpoints.down("md")]: {
-      marginBottom: "4em",
+      marginBottom: "1em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginBottom: "2em",
+      marginBottom: "1em",
     },
   },
   logo: {
     color: theme.palette.secondary.main,
     width: "max-content",
     fontSize: "1.5rem",
+    fontfamily: "Baloo 2",
+    fontweight: 700,
   },
   drawerIconContainer: {
     marginLeft: "auto",
@@ -67,14 +69,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   drawer: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: "#FFB287",
     padding: "0 6em",
   },
   link: {
     fontSize: "1.25em",
-    color: theme.palette.secondary.main,
+    color: "#ffffff",
     "&:hover": {
-      color: theme.palette.info.main,
+      color: "#000000",
     },
   },
 }));
@@ -83,7 +85,7 @@ const Header = () => {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("xl"));
 
   const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -93,7 +95,7 @@ const Header = () => {
 
   const tabs = (
     <>
-      <Grid container justify="flex-end" spacing={4}>
+      <Grid container spacing={4}>
         {path.map(({ name, link }) => (
           <Grid item key={link}>
             <Link href={link}>
@@ -121,11 +123,13 @@ const Header = () => {
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: classes.drawer }}
-        anchor="right"
+        anchor="left"
       >
         <div className={classes.toolbarMargin} />
         <List disablePadding>
-          {path.map(({ name, link }) => (
+          {path.map(({ name, link, exclude }) => { 
+            if(!exclude){ 
+              return(
             <ListItem
               key={link}
               divider
@@ -150,7 +154,7 @@ const Header = () => {
                 </Link>
               </ListItemText>
             </ListItem>
-          ))}
+          )}})}
         </List>
       </SwipeableDrawer>
       <IconButton
@@ -176,9 +180,10 @@ const Header = () => {
             }}
           >
             <Link href="/">
-              <Typography className={classes.logo}>Pycheche</Typography>
+              <Typography className={classes.logo}><p className="logo-texto">Pycheche</p></Typography>
             </Link>
             {matches ? drawer : tabs}
+
           </Toolbar>
         </AppBar>
       </ElevationScroll>
