@@ -7,7 +7,7 @@ import rough from "roughjs/bundled/rough.esm";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Image from "components/image";
-
+import Download from "components/Download";
 
 
 
@@ -35,9 +35,14 @@ const EditorDePasos = () => {
                     <Router>
                       <li>
                       <Link to="/image"> Ir a la pizzarra </Link> - <code>/components/image.js</code>
-                      </li>    
+                      </li>  
+                      <li>
+                        <Link to="/download"> Download </Link> -{" "}
+                        <code>/components/Download.js</code>
+                      </li>{" "}  
                       <Switch>
                       <Route path="/Image" component={Image} />
+                      <Route path="/download" component={Download} />
                       </Switch>
 
                      </Router>
