@@ -1,11 +1,11 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
 const main = "#FFB287";
 const mainWhite = "#fafafa";
 const secondary = "#FF7893";
 const blue = "#757ce8";
 // Create a theme instance.
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     common: {
       black: main,
