@@ -8,7 +8,6 @@
 	margin-bottom: 5px;
 	text-align: center;
 	width: 100%;
-	margin-top: 0px;
 }
 
 .cuadro{
@@ -68,7 +67,7 @@
 
 
   .formulario{
-	  width: 40%;
+	width: 350px;
   }
 
   .btn_ok{

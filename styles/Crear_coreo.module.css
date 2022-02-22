@@ -7,6 +7,7 @@
 	margin-bottom: 5px;
 	text-align: center;
 	width: 100%;
+	margin-top: 10px;
 }
 
 .cuadro{
@@ -80,6 +81,7 @@
     margin-left: 20px;
 	padding: 2px 60px 2px 60px;
 	font-size: 20px;
+	width: 50%;
     position: relative;
     float: right;
  
@@ -154,4 +156,8 @@
 
 .btn_ok:hover{
 	background: #eb5674;;
+}
+
+.formulario{
+	width: 350px;
 }
