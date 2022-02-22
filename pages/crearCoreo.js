@@ -1,11 +1,23 @@
 import Layout from "components/layout/Layout";
 import { Container, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+import document from "next/document";
+>>>>>>> main
 import { Formik, Form, Field } from 'formik';
 import React, { useState } from 'react';
 import estilos from 'styles/Crear_coreo.module.css';
 import ModalPasos from "components/modal_pasos";
+<<<<<<< HEAD
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+=======
+import { ContactSupportOutlined } from "@material-ui/icons";
+=======
+import editarPasos from "./editarPasos";
+>>>>>>> Stashed changes
+>>>>>>> main
 
 const useStyles = makeStyles((theme) => ({
   snsIcon: {
@@ -52,6 +64,7 @@ const CrearCoreo = () => {
       description="Pagina para crear una clase nueva"
     >
       <Container maxWidth="md">
+<<<<<<< Updated upstream
         <Grid container direction="column" alignItems="center" spacing={4}>
 
           <ModalPasos isOpen={addModal} onAddModalChange={handleAddModalChange} />
@@ -167,12 +180,27 @@ const CrearCoreo = () => {
                   />}
                 </div>
 
+<<<<<<< HEAD
                 <a href="/editorDePasos" >  <input type="button" value="Crear Paso" className={estilos.btn_pasos} /></a>
                 <button type="button" className={estilos.btn_pasos} onClick={handleAddModalChange}>Subir pasos</button>
 
 
                 <button type="submit" className={estilos.btn_guardar} onClick={guardadoExitoso}>Guardar Coreo</button>
 
+=======
+                    <a href="/editorDePasos" >  <input type="button" value="Crear Paso" className={estilos.btn_pasos}/></a>
+                    <button type="button" className={estilos.btn_pasos} onClick={handleAddModalChange}>Subir pasos</button>
+                    
+=======
+        <Grid container direction="column" spacing={8}>
+          <Grid item>
+           
+          </Grid>
+>>>>>>> Stashed changes
+          
+                <button type="submit" className={estilos.btn_guardar}>Guardar Coreo</button>
+                {formularioEnviado && <p className="exito">Clase creada con exito!</p>}
+>>>>>>> main
               </Form>
             )}
 
