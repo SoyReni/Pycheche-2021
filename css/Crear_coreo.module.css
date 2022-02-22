@@ -1,4 +1,3 @@
-
 .cabecera{
 	border: 2px  solid  rgba(0, 0, 0, 0.16);
 	border-radius: 20px;
@@ -8,20 +7,17 @@
 	text-align: center;
 	width: 100%;
 }
-
 .cuadro{
    display: block;
    margin-top: 23px;
    flex:content;   
   
 }
-
 .subtitulo{
 	Font-size: 18px;  
 	color: gray;
 	margin-right: 10px;
 }
-
 .select_proyeccion, .btn_pasos, .btn_guardar{	
 	text-align: center;
 	width: 50%;
@@ -30,9 +26,6 @@
 	margin: 8px;
     
 }
-
-
-
 .select_proyeccion{
     border: 0px;
 	border-radius: 20px;
@@ -42,13 +35,8 @@
     float: right;
     margin-top: 0px;
     margin-right: 0px;
-
   
 }
-
-
-
-
 .btn_pasos, .btn_mas{
     margin-left: 22%;
 	border: 0px;
@@ -56,26 +44,19 @@
 	background-color: #FCE18B;
 	color: rgb(155, 146, 146);
 }
-
 .btn_pasos{
   margin-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
 }
-
-
 .btn_mas, .btn_guardar,.btn_pasos {
 	cursor: pointer;
 }
-
-
-
 .input_text{
 	border-top: 2px;
 	border-left: 2px;
 	border-right: 2px;
 }
-
 .btn_mas{
     margin-left: 20px;
 	padding: 2px 60px 2px 60px;
@@ -84,7 +65,6 @@
     float: right;
  
 }
-
 .a_pasos{
 	margin-left: 22%;
 	text-decoration: none;
@@ -93,7 +73,6 @@
 	background-color: #FCE18B;
 	color: rgb(155, 146, 146);
 }
-
 .btn_guardar{
 	margin-top: 14px ;
 	margin-left: 8%;
@@ -103,37 +82,39 @@
 	background-color: #FF7893;
 	color: white;
 }
-
-
-
 /*hovers*/
-
 .btn_guardar:hover {
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FF7893;
 	transition: all 0.2s ease;
   }
-
   .btn_pasos:hover {
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FCE18B;
 	transition: all 0.2s ease;
   }
-
   .btn_mas:hover {
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FCE18B;
 	transition: all 0.2s ease;
   }
 
-  @media screen and (min-width: 801px) {
-	.formulario {
-		width: 50%;
-	}
-  }
 
-  @media screen and (max-width: 800px) {
-	.formulario {
-		width: 90%;
-	}
-  }
+  .btn_ok{
+	cursor: pointer;
+	border: 0px;
+	border-radius: 20px;
+	background-color: #FF7893;
+	color: white;
+	padding: 2px 30px 2px 30px;
+}
+
+.header_Modal{
+	background-color: #FFB287;
+	color: white;
+}
+
+
+.btn_ok:hover{
+	background: #eb5674;;
+}

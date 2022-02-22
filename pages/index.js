@@ -1,5 +1,4 @@
 import Layout from "components/layout/Layout";
-
 import { Container, Grid, Typography, Avatar, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -12,8 +11,13 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.button.main,
     },
     boxSizing: "border-box",
-    width: "100%",
-    height: "100%",
+    padding: "1em",
+    fontFamily: "Baloo 2",
+    fontSize: "1.5em",
+    fontWeight: "500",
+    textTransform: "none",
+    borderRadius: "25px",
+    minWidth: "300px",
   },
   img: {
     width: "100%",
@@ -29,6 +33,7 @@ const About = () => {
       // type your page title and page description.
       title="Pycheche"
       description="Demo para la materia Interaccion Humano Computadora 2021/22"
+      fondo="principal"
     >
       <Container maxWidth="md">
         <Typography

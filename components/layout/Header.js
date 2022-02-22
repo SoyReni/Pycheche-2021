@@ -35,16 +35,6 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: `1em`,
-    [theme.breakpoints.down("md")]: {
-      marginBottom: "1em",
-    },
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: "1em",
-    },
-  },
   logo: {
     color: theme.palette.secondary.main,
     width: "max-content",
@@ -53,11 +43,11 @@ const useStyles = makeStyles((theme) => ({
     fontweight: 700,
   },
   drawerIconContainer: {
-    marginLeft: "auto",
     padding: 0,
     "&:hover": {
       backgroundColor: "transparent",
     },
+    justifyContent: "left",
   },
   drawerIcon: {
     height: `50px`,
@@ -123,7 +113,7 @@ const Header = () => {
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: classes.drawer }}
-        anchor="left"
+        anchor="right"
       >
         <div className={classes.toolbarMargin} />
         <List disablePadding>
@@ -180,15 +170,13 @@ const Header = () => {
             }}
           >
             <Link href="/">
-              <Typography className={classes.logo}><p className="logo-texto">Pycheche</p></Typography>
+              <div className="logo-container"><img className="logo" src="/images/pycheche.png" alt="pycheche"/></div>
             </Link>
             {matches ? drawer : tabs}
 
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-
-      <div className={classes.toolbarMargin} />
     </>
   );
 };

@@ -13,9 +13,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     width: `100%`,
     height: "50px",
-    position: "relative",
+    position: "fixed",
+    bottom: "0",
     overflow: "hidden",
-    marginTop: "1em",
     padding: "1em 0 ",
   },
   link: {

@@ -32,9 +32,9 @@ const Clase = () => {
       title="Clases"
       description="Clases y Coreos"
     >
-      <div className="">
+      <div className="categorias">
         <div className="row margin-0 clases-container">
-            <div className="col-12 titulo-clases text-center">Seleccion de pycheche</div>
+          <div className="titulo">Nombre de la clase</div>
         </div>
       </div>
     </Layout>

@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 import Head from "next/head";
 
-const Layout = ({ children, title, description, ogImage, url }) => {
+const Layout = ({ children, title, description, ogImage, url, fondo }) => {
   // website Url
   const pageUrl =
     "https://nextjs-and-material-ui-template-with-header-and-footer.vercel.app/";
@@ -52,7 +52,7 @@ const Layout = ({ children, title, description, ogImage, url }) => {
         />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className={fondo}>{children}</main>
       <Footer />
       <style jsx global>
         {`

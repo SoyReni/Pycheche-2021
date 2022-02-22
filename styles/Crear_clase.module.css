@@ -81,6 +81,17 @@
 	color: rgba(255, 255, 255, 1) !important;
 	box-shadow: 0 4px 16px #FCE18B;
 	transition: all 0.2s ease;
-  }.formulario{
-	  width: 30%;
   }
+
+  @media screen and (min-width: 801px) {
+	.formulario {
+		width: 50%;
+	}
+  }
+
+  @media screen and (max-width: 800px) {
+	.formulario {
+		width: 90%;
+	}
+  }
+

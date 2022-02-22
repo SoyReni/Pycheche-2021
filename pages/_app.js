@@ -4,7 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "theme";
-import '../css/style.css'
+import 'styles/style.css'
 import 'bootstrap/dist/css/bootstrap.css'
 export default function MyApp(props) {
   const { Component, pageProps } = props;
@@ -29,6 +29,7 @@ export default function MyApp(props) {
           href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" type="image/x-icon" href="/images/nanduti.png"></link>
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
