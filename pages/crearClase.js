@@ -57,6 +57,7 @@ const CrearClase = () => {
           <Formik
             initialValues={{
               titulo: '',
+              description: '',
               obersavacion_pasos_centro: '',
               obersavacion_pasos_equilibrio: '',
               danza_tradicional: ''
@@ -69,6 +70,7 @@ const CrearClase = () => {
               const clase = {
                 id: localStorage.length + 1,
                 title: valores.titulo,
+                description: valores.descripcion,
                 obsCentro: valores.obersavacion_pasos_centro,
                 obsEquilibrio: valores.obersavacion_pasos_equilibrio,
                 danzaTradicional: valores.input_danza_tradicional
@@ -93,6 +95,16 @@ const CrearClase = () => {
                     name="titulo"
                     placeholder="Titulo de la Clase"
                     className={estilos.cabecera}
+                  />
+                </div>
+
+                <div >
+                  <Field
+                    type="text"
+                    id="descripcion"
+                    name="descripcion"
+                    placeholder="Descripcion..."
+                    className={estilos.observacion}
                   />
                 </div>
 

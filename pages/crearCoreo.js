@@ -59,6 +59,7 @@ const CrearCoreo = () => {
           <Formik
             initialValues={{
               name: '',
+              description: '',
               projection: '',
               musica: '',
               vestuario: '',
@@ -72,6 +73,7 @@ const CrearCoreo = () => {
               const coreo = {
                 //  id : localStorage.length+1,
                 name: valores.nombre,
+                description: valores.descripcion,
                 projection: valores.proyeccion,
                 musica: valores.input_musica,
                 vestuario: valores.input_vestuario,
@@ -97,6 +99,16 @@ const CrearCoreo = () => {
                     className={estilos.cabecera}
                   />
                 </div>
+                <div >
+                  <Field
+                    type="text"
+                    id="descripcion"
+                    name="descripcion"
+                    placeholder="Descripcion..."
+                    className={estilos.descripcion}
+                  />
+                </div>
+
 
                 <div className={estilos.cuadro}>
                   <label htmlFor="proyeccion" className={estilos.subtitulo}>Proyeccion</label>
