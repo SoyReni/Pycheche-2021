@@ -2,7 +2,8 @@ import React, { useState,createRef,useEffect } from "react";
 import { useScreenshot } from "use-react-screenshot";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swatch from "components/swatch";
-import rough from "roughjs/bundled/rough.esm";
+//import rough from "roughjs/bundled/rough.esm";
+//import rough from 'roughjs/bundled/rough.esm.js' 
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -91,7 +92,7 @@ const Image = () => {
       });
     };
 
-    const roughCanvas = rough.canvas(canvas);
+   // const roughCanvas = rough.canvas(canvas);
 
     if (path !== undefined) drawpath();
 
@@ -226,8 +227,8 @@ const Image = () => {
       <canvas
         id="canvas"
         className="App"
-        width={window.innerWidth}
-        height={window.innerHeight}
+        width={1000}
+        height={1000}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -238,7 +239,6 @@ const Image = () => {
 
 
 
-       <Swatch/> 
       </div>
     </div>
   );

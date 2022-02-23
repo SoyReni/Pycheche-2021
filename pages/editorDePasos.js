@@ -1,17 +1,12 @@
+
 import Layout from "components/layout/Layout";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Swatch from "components/swatch";
-import rough from "roughjs/bundled/rough.esm";
-import React, { useEffect, useState } from "react";
+import { Container, Grid,Button } from "@material-ui/core";
+import React from "react";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Image from "components/image";
 import Download from "components/Download";
-
-
-
- 
 
 const EditorDePasos = () => {
   
@@ -32,22 +27,20 @@ const EditorDePasos = () => {
                  <div class="form-group purple-border">
                     
                     <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
-                    <Router>
-                      <li>
-                      <Link to="/image"> Ir a la pizzarra </Link> - <code>/components/image.js</code>
-                      </li>  
-                      <li>
-                        <Link to="/download"> Download </Link> -{" "}
-                        <code>/components/Download.js</code>
-                      </li>{" "}  
-                      <Switch>
-                      <Route path="/Image" component={Image} />
-                      <Route path="/download" component={Download} />
-                      </Switch>
-
-                     </Router>
-                    <capturar/>
+                   
                     
+                    <Button
+                      component={Image}
+              href="/Image"
+             >IR A LA PIZARRA
+              
+            </Button>
+                    
+                      <image/>
+
+
+                     
+
                    
                   
                   </div>
