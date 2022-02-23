@@ -277,6 +277,33 @@ main{
     height: 150px;
 }
 
+@media screen and (min-width: 801px) {
+	.desc-titulo {
+        height: 150px;
+	}
+  }
+
+  @media screen and (max-width: 800px) {
+	.desc-titulo {
+        height: auto;
+	}
+  }
+
 .paso-img{
     width: 100%;
+}
+
+.tarjeta-clase{
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #FFE4D4;
+    margin-bottom: 20px;
+}
+
+.margin-bottom{
+    padding-bottom: 20px;
+}
+
+.separador{
+    margin-top: 80px;
 }

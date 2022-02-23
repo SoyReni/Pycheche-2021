@@ -9,7 +9,7 @@ import Image from "components/image";
 
 const editarPasos = () => {
 return (
-<Router>
+<Router classname="categorias">
 <li>
 <Link to="/image"> Image </Link> 
 </li>    

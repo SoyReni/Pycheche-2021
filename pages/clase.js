@@ -44,14 +44,14 @@ const Clase = () => {
             <div className="info col-3 col-xs-6">{actual.fecha}</div>
             <div className="dato col-3 col-xs-6">Autor:</div>
             <div className="info col-3 col-xs-6">{actual.autor}</div>
-            <div className="dato desc col-2 col-xs-12">Descricpion: </div>
-            <div className="info desc col-10 col-xs-12">{actual.descripcion}</div>
+            <div className="dato desc-titulo col-md-2 col-xs-12">Descricpion: </div>
+            <div className="info desc col-md-10 col-xs-12">{actual.descripcion}</div>
           </div>
           <Divider/>
           <div className="row">
             <div className="pasos col-12">Pasos de centro</div>
             {actual["pasos de centro"].pasos.map((data,key) => { return (           
-             <div className="col-md-4 col-sm-12">
+             <div className="tarjeta-clase col-md-4 col-sm-12">
                 <img className="paso-img" src={data.paso} />
                 <div>Observacion: {data.obs}</div>
              </div>
@@ -60,13 +60,13 @@ const Clase = () => {
           <div className="row">
             <div className="pasos dato col-12">Pasos de equilibrio</div>
             {actual["pasos de equilibrio"].pasos.map((data,key) => { return (           
-             <div className="col-md-4 col-sm-12">
+             <div className="tarjeta-clase col-md-4 col-sm-12">
                 <img className="paso-img" src={data.paso} />
                 <div>Observacion: {data.obs}</div>
              </div>
           )})}
           </div>
-          <div className="row">
+          <div className="row margin-bottom">
             <div className="pasos col-12">Danzas tradicionales</div>
             {actual["danzas tradicionales"].danzas.map((data,key) => { return (           
              <div>

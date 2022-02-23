@@ -87,6 +87,7 @@ const About = () => {
             </Button>
           </Grid>
         </Grid>
+        <div className="separador"></div>
       </Container>
     </Layout>
   );

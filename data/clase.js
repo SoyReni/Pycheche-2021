@@ -14,20 +14,20 @@ export const clases = [
         "autor" : "Yo",
         "pasos de centro" : { "pasos": [
             {"paso": "/images/paso1.jpg",
-            "obs": "dakflkl"},
+            "obs": "Esta es una observacion"},
             {"paso": "/images/paso2.jpg",
-            "obs": "dakflkl"},]},
+            "obs": "Esta es una observacion"},]},
         "pasos de equilibrio" : { "pasos": [
             {"paso": "/images/paso1.jpg",
-            "obs": "dakflkl"},
+            "obs": "Esta es una observacion"},
             {"paso": "/images/paso2.jpg",
-            "obs": "dakflkl"},
+            "obs": "Esta es una observacion"},
             {"paso": "/images/paso3.jpg",
-            "obs": "dakflkl"},
+            "obs": "Esta es una observacion"},
             {"paso": "/images/paso4.jpg",
-            "obs": "dakflkl"},]},
+            "obs": "Esta es una observacion"},]},
         "danzas tradicionales" : { "danzas": [
-            {"Danza": "Solito"},{"Danza": "Solito"},{"Danza": "Solito"},{"Danza": "Solito"},]},
+            {"Danza": "Solito"},{"Danza": "Palomita"},{"Danza": "Galopera"},]},
     },
 
     {
