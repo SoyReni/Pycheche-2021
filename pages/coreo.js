@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const Clase = () => {
+const coreo = () => {
   const [actual, setactual] = useState(clases.find(v=>v.id===1));
   const classes = useStyles();
   return (
@@ -79,4 +79,4 @@ const Clase = () => {
   );
 };
 
-export default Clase;
+export default coreo;

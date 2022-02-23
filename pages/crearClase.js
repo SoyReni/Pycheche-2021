@@ -163,7 +163,7 @@ const CrearClase = () => {
               </div>
             </ModalBody>
             <ModalFooter>
-              <a href="/misClases" >  <input type="button" value="OK!" className={estilos.btn_ok} /></a>
+              <a href="/clase" >  <input type="button" value="OK!" className={estilos.btn_ok} /></a>
             </ModalFooter>
           </Modal>
 

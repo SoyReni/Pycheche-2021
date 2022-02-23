@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.button.main,
     },
     boxSizing: "border-box",
-    padding: "1em",
+    padding: "0.8em",
     fontFamily: "Baloo 2",
     fontSize: "1.5em",
     fontWeight: "500",
@@ -74,6 +74,16 @@ const About = () => {
               className={classes.btn}
             >
               Crear Coreo
+            </Button>
+          </Grid>
+          <Grid item md={8}>
+            <Button
+              component={"a"}
+              rel="noreferrer noopener"
+              href="/editorDePasos"
+              className={classes.btn}
+            >
+              Editor de pasos
             </Button>
           </Grid>
         </Grid>
